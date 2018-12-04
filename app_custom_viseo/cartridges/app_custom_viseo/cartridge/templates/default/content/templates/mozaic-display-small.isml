@@ -1,0 +1,3 @@
+<!--- TEMPLATENAME: mozaic-display-full.isml --->
+
+<isprint value="${contentAsset.custom.body}" />

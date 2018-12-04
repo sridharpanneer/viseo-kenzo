@@ -1,0 +1,23 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+<iscache type="relative" hour="24" />
+<iscomment>
+    This template renders the slot content of the bloc homepage landing slot
+    in case the slot content is of type Content Asset.
+    Note, only one content asset is rendered.
+</iscomment>
+
+<iscomment>make sure we have content at all</iscomment>
+
+<isset name="contentAsset" value="${pdict.ContentAsset}" scope="page" />
+<isif condition="${!empty(contentAsset) && !empty(contentAsset.custom.KE_Asset_Mosaic)}">
+    <isset name="contentMozaic" value="${contentAsset.custom.KE_Asset_Mosaic.toString()}" scope="page" />
+    <isif condition="${contentMozaic === 'Portrait_Content'}">
+        <isinclude template="content/templates/mozaic-display-portrait"/>
+    <iselseif condition="${contentMozaic === 'Landscape'}">
+        <isinclude template="content/templates/mozaic-display-landscape"/>
+    <iselseif condition="${contentMozaic === 'Full Width'}">
+        <isinclude template="content/templates/mozaic-display-full"/>
+    <iselseif condition="${contentMozaic === 'Small_Width'}">
+        <isinclude template="content/templates/mozaic-display-small"/>
+    </isif>
+</isif>
