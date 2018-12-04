@@ -11,7 +11,7 @@
 <isset name="contentAsset" value="${pdict.ContentAsset}" scope="page" />
 <isif condition="${!empty(contentAsset) && !empty(contentAsset.custom.KE_Asset_Mosaic)}">
     <isset name="contentMozaic" value="${contentAsset.custom.KE_Asset_Mosaic.toString()}" scope="page" />
-    <isif condition="${contentMozaic === 'Portrait_Content'}">
+    <isif condition="${contentMozaic === 'Portrait Content'}">
         <isinclude template="content/templates/mozaic-display-portrait"/>
     <iselseif condition="${contentMozaic === 'Landscape'}">
         <isinclude template="content/templates/mozaic-display-landscape"/>

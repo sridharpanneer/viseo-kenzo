@@ -1,1 +1,8 @@
-<isprint value="${contentAsset.custom.body}" encoding="off"/>
+<isset name="featuredImageSmall" value="${contentAsset.custom.KE_featuredImage_small}" scope="page" />
+<isset name="featuredImageLarge" value="${contentAsset.custom.KE_featuredImage_large}" scope="page" />
+<isset name="linktitle" value="${'Dummy'}" scope="page" />
+<isif condition="${!empty(featuredImageSmall) && !empty(featuredImageLarge)}">
+    <div class="bloc-image js-multiSrc">
+        <a href="${lien}" title="${linktitle}"><img src="" data-src-mobile="${featuredImageSmall.getURL()}" data-src-desktop="${featuredImageLarge.getURL()}" alt="${!empty(contentAsset.custom.RI_SEO_ALT_IMAGE) ? contentAsset.custom.RI_SEO_ALT_IMAGE : Resource.msg('global.storenameurl','locale',null)}"/></a>
+    </div>
+</isif>

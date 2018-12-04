@@ -1,0 +1,6 @@
+<script>//common/scripts.isml</script>
+<script defer type="text/javascript" src="${URLUtils.staticURL('/js/main.js')}"></script>
+<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js" />
+<isloop items="${ require('*/cartridge/scripts/assets.js').scripts }" var="script">
+    <script defer type="text/javascript" src="${script}"></script>
+</isloop>
