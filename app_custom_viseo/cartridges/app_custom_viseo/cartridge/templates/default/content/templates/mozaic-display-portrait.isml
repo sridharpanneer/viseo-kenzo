@@ -1,3 +1,1 @@
-<!--- TEMPLATENAME: mozaic-display-full.isml --->
-
-<isprint value="${contentAsset.custom.body}" />
+<isprint value="${contentAsset.custom.body}" encoding="off"/>
