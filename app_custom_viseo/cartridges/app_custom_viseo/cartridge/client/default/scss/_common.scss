@@ -1,0 +1,12 @@
+.c-kenzo-container {
+ 	@include media-breakpoint-down(xs) { 
+		 padding-bottom: 130px;
+    }
+    @include media-breakpoint-up(sm) { 
+	    display: flex;
+	    flex-flow: row wrap;
+	    justify-content: space-between;
+	    flex-wrap: nowrap;
+	    width: calc(100%);
+    }
+  }

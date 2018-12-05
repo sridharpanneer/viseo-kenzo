@@ -1,162 +1,121 @@
 @import "variables";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins/breakpoints";
-@import "components/categoryTiles";
+@import "common";
 
-.page {
-    .hero {
-        background-position-y: 0;
+
+.bloc-section {
+  margin: 0px auto;
+
+  .bloc-text-container {
+    padding-top: 113px;
+    text-align: center;
+    .text-container {
+    padding: 0 20px;
     }
+  }
+  .bloc-full-container {
+    width: 100%;
+    position: relative;
+    margin: 1% 0;
 
-    .shop-the-style {
-        .hero {
-            background-position-y: 45%;
-        }
+    .bloc-image {
+    width: 100%;
+    img {
+        width: 100%;
+        border-radius: 5px;
     }
-}
-
-.hp-category-message,
-.hp-promotion-message {
+    }
+    .bloc-text {
     position: absolute;
-    bottom: 0.9375em;
-    left: 1.875em;
-
-    a {
-        color: $white;
+    text-align: center;
+    width: 80%;
+    top: 42%;
+    left: 50%;
+    margin-left: -40%;
     }
-
-    a.hp-promotion-message1 {
-        font-size: 0.75em;
+    .bloc-text:after {
+    clear: both;
     }
-}
-
-.category-tile {
-    border: 1px solid white;
-}
-
-.half-height {
-    min-height: 23.125em;
-
-    @include media-breakpoint-down(sm) {
-        min-height: 15.375em;
-    }
-}
-
-.full-height {
-    min-height: 51.725em;
-
-    @include media-breakpoint-down(sm) {
-        min-height: 35.375em;
-    }
-
-    @include media-breakpoint-only(xs) {
-        min-height: 15.375em;
-    }
-}
-
-.mens-jackets {
-    background-position: 50% 34%;
-
-    @include media-breakpoint-up(sm) {
-        background-size: auto 100%;
-    }
-
-    @include media-breakpoint-down(xs) {
-        background-position-y: 8%;
-    }
-}
-
-.womens-dresses {
-    background-position: 50% 15%;
-}
-
-.womens-jewelry {
-    background-position: 40% 60%;
-
-    @include media-breakpoint-up(sm) {
-        background-size: auto 100%;
-    }
-}
-
-.shop-red {
-    background-position-y: 60%;
-    min-height: 28.65em;
-
-    @include media-breakpoint-down(sm) {
-        min-height: 15.375em;
-    }
-
-    @include media-breakpoint-down(xs) {
-        background-position: 45% 85%;
-    }
-}
-
-.container.home-categories {
-
-    @include media-breakpoint-only(xs) {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-.home-main-categories {
-    margin-bottom: 2em;
-}
-
-.hp-product-grid {
+    .bloc-title {
+    font-size: 1.14285714286rem;
+    font-family: Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 5px 0;
+    height: 26px;
+    line-height: 24px;
+    font-weight: 400;
     margin: 0;
-
-    .hp-product-content {
-        background-color: transparent; // remove if no longer using Bootstrap .card styles
-        text-align: center;
-        border: 0;
-
-        @include media-breakpoint-down(xs) {
-            min-height: 20.375em;
-        }
-
-        span {
-            font-size: 1em;
-
-            @include media-breakpoint-down(sm) {
-                font-size: 0.85em;
-            }
-
-            @include media-breakpoint-down(xs) {
-                font-size: 0.65em;
-            }
-        }
-
-        span.largeText {
-            font-size: 5.5em;
-            font-weight: 200;
-
-            @include media-breakpoint-down(lg) { font-size: 4.5em; }
-
-            @include media-breakpoint-down(md) { font-size: 3.4em; }
-
-            @include media-breakpoint-down(sm) { font-size: 3em; }
-
-            @include media-breakpoint-down(xs) { font-size: 2.5em; }
-        }
-
-        a {
-            color: $primary;
-            text-decoration: none;
-        }
     }
+    .bloc-description {
+    font-size: 2.214285714286rem;
+    font-family: Helvetica, sans-serif;
+    height: 44px;
+    line-height: 44px;
+    font-weight: 400;
+    margin: 10px 0;
+    }
+  }
+  .homepage-mosaic {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    .bloc-half-width {
+    width: 48.25%;
+    border-radius: 2px;
+    position: relative;
+    margin: 20px 0;
+   @include media-breakpoint-down(md){
+        margin: 10px 0;
+    }
+    }
+    .bloc-full-width {
+    width: 100%;
+    border-radius: 2px;
+    position: relative;
+    margin: 20px 0;
+   @include media-breakpoint-down(md){
+        margin: 10px 0;
+    }
+    }
+    .bloc-image {
+    width: 100%;
+    line-height: 0;
+    img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    }
+    .bloc-text {
+    position: absolute;
+    text-align: center;
+    top: 13%;
+    left: 50%;
+    width: 80%;
+    margin-left: -40%;
+    }
+    .bloc-text:after {
+    clear: both;
+    }
+    .bloc-title {
+    font-size: 1.14285714286rem;
+    font-family: Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 5px 0;
+    height: 26px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: 0;
+    }
+    .bloc-description {
+    font-size: 2.214285714286rem;
+    font-family: Helvetica, sans-serif;
+    height: 44px;
+    line-height: 44px;
+    font-weight: 400;
+    margin: 10px 0;
+    }
+  }
 }
 
-.home-email-signup {
-    background-color: $grey6;
-
-    > .container {
-        padding-top: 0.625em;
-        padding-bottom: 0.625em;
-    }
-
-    .email-description {
-        padding-top: 0.375em;
-        color: $white;
-    }
-}
