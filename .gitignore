@@ -1,5 +1,3 @@
-./node_modules
-storefront-reference-architecture/package-lock.json
-app_custom_viseo/package-lock.json
-app_custom_viseo/node_modules/*
-app_custom_viseo/package-lock.json
+**/node_modules/*
+**/package-lock.json/
+**/cartridge/static/default/*
