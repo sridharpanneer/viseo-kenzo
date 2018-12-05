@@ -7,7 +7,7 @@ var path = require('path');
         name: 'js',
         entry: sgmfScripts.createJsPath(),
         output: {
-            path: path.resolve('./cartridges/app_custom_viseo/cartridge/static/default/js/'),
+            path: path.resolve('./cartridges/app_custom_viseo/cartridge/static/'),
             filename: '[name].js'
         }
     }, {
