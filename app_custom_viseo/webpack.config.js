@@ -18,29 +18,35 @@ var path = require('path');
             path: path.resolve('./cartridges/app_custom_viseo/cartridge/static'),
             filename: '[name].css'
         },
-        module: {
-            rules: [{
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    use: [{
-                        loader: 'css-loader',
-                        options: {
-                            url: false
-                        }
-                    }, {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: [
-                                require('autoprefixer')()
-                            ]
-                        }
-                    }, {
-                        loader: 'sass-loader'
-                    }]
-                })
-            }]
-        },
-        plugins: [
-            new ExtractTextPlugin({ filename: '[name].css' })
-        ]
+    module: {
+        rules: [{
+            test: /\.scss$/,
+            use: ExtractTextPlugin.extract({
+                use: [{
+                    loader: 'css-loader',
+                    options: {
+                        url: false,
+                        minimize: true
+                    }
+                }, {
+                    loader: 'postcss-loader',
+                    options: {
+                        plugins: [
+                            require('autoprefixer')()
+                        ]
+                    }
+                }, {
+                    loader: 'sass-loader',
+                    options: {
+                        includePaths: [
+                            path.resolve(process.cwd(), '../storefront-reference-architecture/node_modules/')
+                        ]
+                    }
+                }]
+            })
+        }]
+    },
+    plugins: [
+        new ExtractTextPlugin({ filename: '[name].css' })
+    ]
     }];
