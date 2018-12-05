@@ -57,6 +57,16 @@ server.get('Initialize', function (req, res, next) {
                                         Logger.warn("Upsell-RetreiveContent : Slider - Error while parsing XML");
                                     }
                             break;
+                            
+                        case 'banner':
+                            try {
+                                res.render('slots/content/templates/hero-banner', { ContentAsset: ContentAsset , calloutMsg: calloutMsg });
+                                next();
+                            } catch (e) {
+                                Logger.warn("Upsell-RetreiveContent : Slider - Error while parsing XML");
+                            }
+                            break;
+
 
                         case 'mozaic':
                             try {
