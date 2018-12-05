@@ -2,6 +2,7 @@
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins/breakpoints";
 @import "common";
+@import "headerPage";
 
 
 .bloc-section {
@@ -117,5 +118,9 @@
     margin: 10px 0;
     }
   }
+}
+
+.home-hero-banner {
+width: 100%;;
 }
 

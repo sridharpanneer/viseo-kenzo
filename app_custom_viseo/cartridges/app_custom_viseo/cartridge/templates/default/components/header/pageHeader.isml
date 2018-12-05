@@ -1,7 +1,6 @@
-
 <header>
-    <nav role="navigation">
-        <div class="header container">
+    <nav role="navigation" class="header-container">
+        <div class="header">
             <div class="row">
                 <div class="col-12">
                     <div class="navbar-header brand">
