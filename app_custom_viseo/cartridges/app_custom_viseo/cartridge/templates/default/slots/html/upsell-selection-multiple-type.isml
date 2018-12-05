@@ -2,7 +2,7 @@
 <iscache type="relative" hour="24" />
 <isif condition="${!empty(slotcontent)}">
     <div class="bloc-section">
-        <div class="c-rimowa-container homepage-mosaic category-mosaic">
+        <div class="c-kenzo-container homepage-mosaic category-mosaic">
             <isloop items="${slotcontent.content}" var="markupText" status="loopstate">
                 <isif condition="${!empty(markupText)}">
                     <iscomponent pipeline="Upsell-Initialize" content="${markupText.markup}"/>
