@@ -39,7 +39,9 @@ var path = require('path');
                     loader: 'sass-loader',
                     options: {
                         includePaths: [
-                            path.resolve(process.cwd(), '../storefront-reference-architecture/node_modules/')
+                            path.resolve(process.cwd(), '../storefront-reference-architecture/node_modules/'),
+							path.resolve(process.cwd(), '../storefront-reference-architecture/cartridges/app_storefront_base/cartridge/client/default/scss'),
+							path.resolve(process.cwd(), '../storefront-reference-architecture/cartridges/app_storefront_base/cartridge/client/default/js')
                         ]
                     }
                 }]
