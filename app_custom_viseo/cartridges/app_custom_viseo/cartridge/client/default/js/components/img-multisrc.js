@@ -1,5 +1,5 @@
-var util = require('./util');
-$.widget("rimowa.multisrc", {
+var util = require('./utility');
+$.widget("kenzo.multisrc", {
 
     // default options
     options: {
