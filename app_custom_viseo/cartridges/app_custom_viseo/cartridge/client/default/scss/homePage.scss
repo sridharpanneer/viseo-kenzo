@@ -5,6 +5,7 @@
 @import "headerPage";
 
 
+
 .bloc-section {
   margin: 0px auto;
 
@@ -57,70 +58,27 @@
     margin: 10px 0;
     }
   }
-  .homepage-mosaic {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
 
-    .bloc-half-width {
-    width: 48.25%;
-    border-radius: 2px;
-    position: relative;
-    margin: 20px 0;
-   @include media-breakpoint-down(md){
-        margin: 10px 0;
-    }
-    }
-    .bloc-full-width {
-    width: 100%;
-    border-radius: 2px;
-    position: relative;
-    margin: 20px 0;
-   @include media-breakpoint-down(md){
-        margin: 10px 0;
-    }
-    }
-    .bloc-image {
-    width: 100%;
-    line-height: 0;
-    img {
-        width: 100%;
-        border-radius: 5px;
-    }
-    }
-    .bloc-text {
-    position: absolute;
-    text-align: center;
-    top: 13%;
-    left: 50%;
-    width: 80%;
-    margin-left: -40%;
-    }
-    .bloc-text:after {
-    clear: both;
-    }
-    .bloc-title {
-    font-size: 1.14285714286rem;
-    font-family: Helvetica, sans-serif;
-    text-transform: uppercase;
-    padding: 5px 0;
-    height: 26px;
-    line-height: 24px;
-    font-weight: 400;
-    margin: 0;
-    }
-    .bloc-description {
-    font-size: 2.214285714286rem;
-    font-family: Helvetica, sans-serif;
-    height: 44px;
-    line-height: 44px;
-    font-weight: 400;
-    margin: 10px 0;
-    }
-  }
 }
 
 .home-hero-banner {
-width: 100%;;
+	width: 100%;
+		img {
+			width: 100%;
+		}
 }
 
+
+
+// need to remove it
+.category-tile {
+    border: 1px solid white;
+}
+
+.half-height {
+    min-height: 23.125em;
+
+    @include media-breakpoint-down(sm) {
+        min-height: 15.375em;
+    }
+}
