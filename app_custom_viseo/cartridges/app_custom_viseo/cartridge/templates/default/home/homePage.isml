@@ -28,7 +28,7 @@
     </div>
     <div class="home-email-signup">
         <div class="container">
-            <form role="form">
+            <form role="form" action="${URLUtils.url('Newsletter-Subscribe')}" id="newsletter-form">
                 <div class="row">
                     <div class="col-sm-5">
                         <div class="input-group">
@@ -40,7 +40,11 @@
                     </div>
                     <div class="col-sm-7 email-description">${Resource.msg('description.form.emailsignup', 'homePage', null)}</div>
                 </div>
+                <div class="row">
+                	<span class="message-newsletter"></span>
+                </div>
             </form>
         </div>
     </div>
+    <isslot id="instagram-feed" context="global" description="slot used for instagram feed" />
 </isdecorate>
